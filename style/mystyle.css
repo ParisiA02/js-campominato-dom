@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(35, 35, 128);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 200px auto;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+}
+
+.lvl1{
+    width: calc(100%/10);
+    height: calc(100%/10);
+    background-color: green;
+    border: 2px solid black; 
+}
+
+.lvl2{
+    width: calc(100%/9);
+    height: calc(100%/9);
+    background-color: yellow;
+    border: 2px solid black; 
+}
+
+.lvl3{
+    width: calc(100%/7);
+    height: calc(100%/7);
+    background-color: red;
+    border: 2px solid black; 
+}
+
+.colore{
+    background-color: lightblue;
+}
