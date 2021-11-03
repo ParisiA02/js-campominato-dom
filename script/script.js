@@ -22,16 +22,15 @@ if(livello === 1){
             let numero = [i+1];
             square.innerHTML = numero;
             square.classList.add("colore");
-
-            let trovato = numeri.includes(numero);
+            
+            var numeroCliccato = parseInt(document.getElementsByClassName("lvl1")[i].textContent);
+            let trovato = numeri.includes(numeroCliccato);
 
             if(trovato){
-                console.log("trovato");
+                console.log("trovato", numeroCliccato);
             }else{
-                console.log(numero);
-                console.log("non trovato");
+                console.log("non trovato", numeroCliccato);
             }
-            
         });
     }
 
@@ -71,7 +70,7 @@ function bombGenerator(){
     
     let numeri = [];
 
-    while (numeri.length < 100) {
+    while (numeri.length < 16) {
         
         const numero = Math.floor(Math.random() * 100 + 1);
 
