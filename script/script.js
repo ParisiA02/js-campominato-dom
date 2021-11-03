@@ -11,19 +11,34 @@ let container = document.querySelector(".container");
 
 if(livello === 1){
 
+    let numeri = bombGenerator();
+    console.log(numeri);
+
     for(let i = 0; i < 100; i++){
         let square = squareGenerator("div","lvl1");
         container.appendChild(square);
-        
         square.addEventListener("click",function(){
-            square.innerHTML = [i+1];
+
+            let numero = [i+1];
+            square.innerHTML = numero;
             square.classList.add("colore");
+
+            let trovato = numeri.includes(numero);
+
+            if(trovato){
+                console.log("trovato");
+            }else{
+                console.log(numero);
+                console.log("non trovato");
+            }
+            
         });
     }
 
 }else if(livello === 2){
-
+    
     for(let i = 0; i < 81; i++){
+
         let square = squareGenerator("div","lvl2");
         container.appendChild(square);
         square.addEventListener("click",function(){
@@ -50,4 +65,19 @@ function squareGenerator(squareGen, classAdd){
     let node = document.createElement(squareGen);
     node.classList.add(classAdd);
     return node;
+}
+
+function bombGenerator(){
+    
+    let numeri = [];
+
+    while (numeri.length < 100) {
+        
+        const numero = Math.floor(Math.random() * 100 + 1);
+
+        if (!(numeri.includes(numero))){
+            numeri.push(numero);
+        }
+    }
+    return numeri;
 }
