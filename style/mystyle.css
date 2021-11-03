@@ -34,10 +34,14 @@ body {
 .lvl3{
     width: calc(100%/7);
     height: calc(100%/7);
-    background-color: red;
+    background-color: orangered;
     border: 2px solid black; 
 }
 
-.colore{
-    background-color: lightblue;
+.bomb{
+    background-color: red;
+}
+
+.safe{
+    background-color: limegreen;
 }
